@@ -1,6 +1,56 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
+## 📚 API Routes
+
+![Folder Structure](image.png)
+
+
+### 🔹 Root
+- `GET /`  
+  ✅ Returns a welcome message.
+
+---
+
+### 🔹 Books
+
+#### ➕ Add Single Book  
+- `POST /books`  
+  📦 Body: JSON (Book schema)
+
+#### ➕ Add Multiple Books  
+- `POST /books/bulk`  
+  📦 Body: JSON (List of Book schema)
+
+#### 📖 Get All Books  
+- `GET /books`  
+  🔄 Returns all books
+
+#### 📘 Get Book by ID  
+- `GET /books/{book_id}`  
+  🔍 Example: `/books/1`
+
+#### ✏️ Update Book by ID  
+- `PUT /books/{book_id}`  
+  🔧 Example: `/books/1`  
+  📦 Body: JSON (Book schema)
+
+#### ❌ Delete Book by ID  
+- `DELETE /books/{book_id}`  
+  🗑️ Example: `/books/1`
+
+---
+
+### 🔹 File Uploads
+
+#### 📤 Upload Books via CSV  
+- `POST /books/upload/csv`  
+  📁 Form Data: `file=<UploadFile>`
+
+#### 📤 Upload Books via Excel  
+- `POST /books/upload/excel`  
+  📁 Form Data: `file=<UploadFile>`
+
 
 First, run the development server:
 
